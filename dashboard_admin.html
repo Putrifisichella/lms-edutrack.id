@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#f0f5fa] min-h-screen text-slate-800">
+
+    <header class="bg-white border-b border-gray-200 px-8 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center space-x-3">
+            <div class="flex items-center">
+                <img src="assets/image/edutrack_logo.png" alt="Logo Edutrack" class="h-10 w-auto object-contain">
+            </div>
+            <h1 class="text-xl font-bold tracking-tight text-black">Dashboard Admin</h1>
+        </div>
+        <button class="flex items-center space-x-2 text-black font-semibold hover:text-red-600 transition">
+            <i class="fa-solid fa-right-from-bracket text-lg"></i>
+            <span>Keluar</span>
+        </button>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-5">
+                <div class="w-16 h-16 bg-[#70a1ff]/20 text-[#45aaf2] rounded-full flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm font-medium">Total Siswa</p>
+                    <p class="text-3xl font-bold text-slate-800">1500</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-5">
+                <div class="w-16 h-16 bg-[#74b9ff]/20 text-[#0984e3] rounded-full flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm font-medium">Total Guru</p>
+                    <p class="text-3xl font-bold text-slate-800">30</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-5">
+                <div class="w-16 h-16 bg-[#74b9ff]/20 text-[#0984e3] rounded-full flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm font-medium">Total Kelas</p>
+                    <p class="text-3xl font-bold text-slate-800">18</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-fit">
+                <h2 class="text-base font-bold mb-4 text-black">Menu Manajemen</h2>
+                <div class="space-y-3">
+                    
+                    <button class="w-full text-left p-3 rounded-xl border border-gray-100 hover:border-blue-400 hover:bg-blue-50/30 transition group">
+                        <p class="font-semibold text-sm text-slate-800 group-hover:text-blue-600">Kelola Siswa</p>
+                        <p class="text-xs text-gray-400 mt-0.5">Tambah, edit, hapus data siswa</p>
+                    </button>
+
+                    <button class="w-full text-left p-3 rounded-xl border border-gray-100 hover:border-blue-400 hover:bg-blue-50/30 transition group">
+                        <p class="font-semibold text-sm text-slate-800 group-hover:text-blue-600">Kelola Guru</p>
+                        <p class="text-xs text-gray-400 mt-0.5">Tambah, edit, hapus data guru</p>
+                    </button>
+
+                    <button class="w-full text-left p-3 rounded-xl border border-gray-100 hover:border-blue-400 hover:bg-blue-50/30 transition group">
+                        <p class="font-semibold text-sm text-slate-800 group-hover:text-blue-600">Kelola Kelas</p>
+                        <p class="text-xs text-gray-400 mt-0.5">Tambah, edit, hapus data kelas</p>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 lg:col-span-2 flex flex-col justify-between min-h-[300px]">
+                <div>
+                    <h2 class="text-base font-bold mb-6 text-black">Aktivitas Terbaru</h2>
+                    
+                    <div class="space-y-5">
+                        <div class="border-b border-gray-100 pb-4">
+                            <p class="text-sm font-medium text-slate-800">Siswa baru ditambahkan: Indra Gunawan</p>
+                            <p class="text-xs text-gray-400 mt-1">18/5/2026</p>
+                        </div>
+
+                        <div class="border-b border-gray-100 pb-4">
+                            <p class="text-sm font-medium text-slate-800">Kelas 10-A diupdate</p>
+                            <p class="text-xs text-gray-400 mt-1">17/5/2026</p>
+                        </div>
+
+                        <div class="pb-2">
+                            <p class="text-sm font-medium text-slate-800">Guru baru ditambahkan: Pak Budi</p>
+                            <p class="text-xs text-gray-400 mt-1">10/5/2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
