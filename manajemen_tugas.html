@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Tugas - EduTrack.id</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#f0f5fa] min-h-screen text-slate-800 flex flex-col">
+
+    <header class="bg-white border-b border-gray-200 px-8 py-4 flex justify-between items-center shadow-sm sticky top-0 z-50">
+        <div class="flex items-center space-x-3">
+            <img src="assets/image/edutrack_logo.png" alt="Logo Edutrack" class="h-8 w-auto object-contain">
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-black leading-tight">Dashboard Guru</h1>
+                <p class="text-xs text-gray-500 font-medium">Ibu Sarah Reeyn S.Pd</p>
+            </div>
+        </div>
+        <button class="flex items-center space-x-2 text-black font-semibold hover:text-red-600 transition">
+            <i class="fa-solid fa-right-from-bracket text-lg"></i>
+            <span>Keluar</span>
+        </button>
+    </header>
+
+    <div class="flex flex-1">
+        
+        <aside class="w-64 bg-white border-r border-gray-200 p-6 flex flex-col justify-between hidden md:flex">
+            <div class="space-y-8">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-slate-100 rounded-md border border-gray-200 flex items-center justify-center text-xs font-bold text-emerald-700">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-800">SMA Nusantara</h3>
+                        <p class="text-[10px] text-gray-400">Academic Portal</p>
+                    </div>
+                </div>
+
+                <nav class="space-y-1">
+                    <a href="#" class="flex items-center space-x-3 px-4 py-2.5 rounded-full text-slate-500 hover:bg-gray-50 text-xs font-semibold transition">
+                        <i class="fa-solid fa-table-columns text-sm"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 px-4 py-2.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold transition">
+                        <i class="fa-solid fa-file-lines text-sm"></i>
+                        <span>Tugas</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3 bg-slate-50 p-3 rounded-xl border border-gray-100">
+                    <div class="w-10 h-10 bg-[#74b9ff] text-white rounded-full flex items-center justify-center text-lg">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-800">Welcome!</p>
+                        <p class="text-[10px] text-gray-500 truncate max-w-[120px]">Ibu Sarah Reeyn S.Pd</p>
+                    </div>
+                </div>
+
+                <button class="w-full flex items-center justify-center space-x-2 border border-gray-200 hover:bg-gray-50 text-indigo-600 py-2 rounded-xl text-xs font-semibold transition shadow-sm bg-white">
+                    <span>Bantuan Teknis</span>
+                    <i class="fa-regular fa-comments"></i>
+                </button>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-6 lg:p-8 flex justify-center">
+            
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 w-full max-w-5xl min-h-[600px] flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex items-center space-x-4">
+                            <a href="#" class="text-black hover:text-gray-600 transition">
+                                <i class="fa-solid fa-caret-left text-2xl"></i>
+                            </a>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-[#74b9ff]/20 text-[#4a90e2] rounded-full flex items-center justify-center text-sm">
+                                    <i class="fa-solid fa-file-signature"></i>
+                                </div>
+                                <h2 class="text-base font-bold text-black tracking-tight">Manajemen Tugas</h2>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-[#74b9ff] hover:bg-blue-500 text-white text-[11px] font-bold py-2 px-4 rounded-lg shadow-sm transition flex items-center space-x-1.5">
+                            <i class="fa-solid fa-plus text-[10px]"></i>
+                            <span>Buat Tugas</span>
+                        </button>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-black mb-4">Semua Tugas</h3>
+
+                    <div class="overflow-x-auto border border-black rounded-2xl">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-200/70 border-b border-black text-xs font-bold text-black">
+                                    <th class="px-6 py-3.5 w-[35%]">Judul Tugas</th>
+                                    <th class="px-4 py-3.5">Mata Pelajaran</th>
+                                    <th class="px-4 py-3.5 text-center">Kelas</th>
+                                    <th class="px-4 py-3.5 text-center">Deadline</th>
+                                    <th class="px-4 py-3.5 text-center">Terkumpul</th>
+                                    <th class="px-4 py-3.5 text-center">Dinilai</th>
+                                    <th class="px-6 py-3.5 text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-[11px] divide-y divide-gray-100">
+                                <tr>
+                                    <td class="px-6 py-4">
+                                        <div class="font-bold text-black text-xs">Tugas Informatika</div>
+                                        <p class="text-gray-400 mt-1 max-w-xs leading-relaxed">Kerjakan Quiz tentang Pertemuan ke-4, kerjakan tepat waktu dan sungguh-sungguh!</p>
+                                    </td>
+                                    <td class="px-4 py-4 text-slate-800 font-medium">Informatika</td>
+                                    <td class="px-4 py-4 text-center text-slate-800 font-medium">11-A</td>
+                                    <td class="px-4 py-4 text-center text-slate-800 font-medium whitespace-nowrap">24-04-26</td>
+                                    <td class="px-4 py-4 text-center text-slate-800 font-medium">12/26</td>
+                                    <td class="px-4 py-4 text-center text-slate-800 font-medium">11/26</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <a href="#" class="font-bold text-black underline hover:text-blue-600 transition">Lihat</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">
+                                        <div class="font-bold text-black text-xs">Tugas Bahasa Inggris</div>
+                                        <p class="text-gray-400 mt-1 max-w-xs leading-relaxed">Write a 2-page essay describing your vacation last month!, be sure to include a photo (if you have any).</p>
+                                    </td>
+                                    <td class="px-4 py-4 text-slate-800 font-medium">Bahasa Inggris</td>
+                                    <td class="px-4 py-4 text-center text-slate-800 font-medium">10-B</td>
+                                    <td class="px-4 py-4 text-center text-slate-800 font-medium whitespace-nowrap">05-06-26</td>
+                                    <td class="px-4 py-4 text-center text-slate-800 font-medium">5/20</td>
+                                    <td class="px-4 py-4 text-center text-slate-800 font-medium">3/5</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <a href="#" class="font-bold text-black underline hover:text-blue-600 transition">Lihat</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="pt-8"></div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

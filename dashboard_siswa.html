@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Siswa - EduTrack.id</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#f0f5fa] min-h-screen text-slate-800 flex flex-col">
+
+    <header class="bg-white border-b border-gray-200 px-8 py-4 flex justify-between items-center shadow-sm sticky top-0 z-50">
+        <div class="flex items-center space-x-3">
+            <img src="assets/image/edutrack_logo.png" alt="Logo Edutrack" class="h-8 w-auto object-contain">
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-black leading-tight">Dashboard Siswa</h1>
+                <p class="text-xs text-gray-500 font-medium">Ahmad Rizki - Kelas 10-A</p>
+            </div>
+        </div>
+        <button class="flex items-center space-x-2 text-black font-semibold hover:text-red-600 transition">
+            <i class="fa-solid fa-right-from-bracket text-lg"></i>
+            <span>Keluar</span>
+        </button>
+    </header>
+
+    <div class="flex flex-1">
+        
+        <aside class="w-64 bg-white border-r border-gray-200 p-6 flex flex-col justify-between hidden md:flex">
+            <div class="space-y-8">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-slate-100 rounded-md border border-gray-200 flex items-center justify-center text-xs font-bold text-emerald-700">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-800">SMA Nusantara</h3>
+                        <p class="text-[10px] text-gray-400">Academic Portal</p>
+                    </div>
+                </div>
+
+                <nav class="space-y-1">
+                    <a href="#" class="flex items-center space-x-3 px-4 py-2.5 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold transition">
+                        <i class="fa-solid fa-table-columns text-sm"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 px-4 py-2.5 rounded-full text-slate-500 hover:bg-gray-50 text-xs font-semibold transition">
+                        <i class="fa-solid fa-chart-simple text-sm"></i>
+                        <span>Rapor Digital</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3 bg-slate-50 p-3 rounded-xl border border-gray-100">
+                    <div class="w-10 h-10 bg-sky-400 text-white rounded-full flex items-center justify-center text-lg">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-800">Welcome!</p>
+                        <p class="text-[10px] text-gray-500 truncate max-w-[120px]">Ahmad Rizki</p>
+                    </div>
+                </div>
+
+                <button class="w-full flex items-center justify-center space-x-2 border border-blue-200 hover:bg-blue-50 text-blue-600 py-2 rounded-xl text-xs font-semibold transition shadow-sm bg-white">
+                    <span>Bantuan Teknis</span>
+                    <i class="fa-regular fa-comments"></i>
+                </button>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <div class="lg:col-span-8 space-y-6">
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-xl flex items-center justify-center text-xl border border-orange-100">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-[11px] font-medium leading-tight">Tugas Belum Dikerjakan</p>
+                            <p class="text-2xl font-bold text-slate-800 mt-0.5">1</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center text-xl border border-emerald-100">
+                            <i class="fa-regular fa-square-check"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-[11px] font-medium leading-tight">Tugas Dikumpulkan</p>
+                            <p class="text-2xl font-bold text-slate-800 mt-0.5">2</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl border border-blue-100">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-[11px] font-medium leading-tight">Rata-rata Nilai</p>
+                            <p class="text-2xl font-bold text-slate-800 mt-0.5">87</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h2 class="text-sm font-bold text-black mb-4">Tugas Belum Dikerjakan</h2>
+                    <div class="border border-gray-100 p-4 rounded-xl space-y-1 bg-white shadow-sm max-w-2xl">
+                        <h3 class="text-xs font-bold text-slate-800">Praktikum Fisika - Gerak Parabola</h3>
+                        <p class="text-[11px] text-gray-400">Lakukan Eksperimen dan Buat Laporan Lengkap</p>
+                        <p class="text-[10px] text-gray-400 pt-3">Deadline: 30 Februari 2026</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
+                    <h2 class="text-sm font-bold text-black">Tugas Dikumpulkan</h2>
+                    
+                    <div class="border border-gray-100 p-4 rounded-xl flex justify-between items-start bg-white shadow-sm">
+                        <div class="space-y-1">
+                            <div class="flex items-baseline space-x-3">
+                                <h3 class="text-xs font-bold text-slate-800">Tugas Aljabar Linear</h3>
+                                <span class="text-[10px] text-gray-400">Matematika</span>
+                            </div>
+                            <p class="text-[11px] text-gray-400 italic">"Bagus, tapi perlu lebih teliti dalam perhitungan"</p>
+                        </div>
+                        <div class="text-xl font-bold text-indigo-600 px-2">85</div>
+                    </div>
+
+                    <div class="border border-gray-100 p-4 rounded-xl flex justify-between items-start bg-white shadow-sm">
+                        <div class="space-y-1">
+                            <div class="flex items-baseline space-x-3">
+                                <h3 class="text-xs font-bold text-slate-800">Essay Bahasa Indonesia</h3>
+                                <span class="text-[10px] text-gray-400">Bahasa Indonesia</span>
+                            </div>
+                            <p class="text-[11px] text-gray-400 italic">"Excellent analysis!"</p>
+                        </div>
+                        <div class="text-xl font-bold text-indigo-600 px-2">90</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-4 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex items-center space-x-2 text-indigo-600 mb-4">
+                    <i class="fa-regular fa-calendar-days text-sm"></i>
+                    <h2 class="text-sm font-bold text-black">Jadwal Pelajaran</h2>
+                </div>
+
+                <div class="space-y-3 text-[11px]">
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-xs">Senin</h3>
+                        <ul class="list-disc list-inside text-gray-500 pl-1 mt-0.5 space-y-0.5">
+                            <li>Matematika</li>
+                            <li>Bahasa Indonesia</li>
+                            <li>Fisika</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-xs">Selasa</h3>
+                        <ul class="list-disc list-inside text-gray-500 pl-1 mt-0.5 space-y-0.5">
+                            <li>Bahasa Inggris</li>
+                            <li>Kimia</li>
+                            <li>Sejarah</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-xs">Rabu</h3>
+                        <ul class="list-disc list-inside text-gray-500 pl-1 mt-0.5 space-y-0.5">
+                            <li>Biologi</li>
+                            <li>Pendidikan Agama</li>
+                            <li>Seni Budaya</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-xs">Kamis</h3>
+                        <ul class="list-disc list-inside text-gray-500 pl-1 mt-0.5 space-y-0.5">
+                            <li>Geografi</li>
+                            <li>PPKN</li>
+                            <li>Sosiologi</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-xs">Jumat</h3>
+                        <ul class="list-disc list-inside text-gray-500 pl-1 mt-0.5 space-y-0.5">
+                            <li>Pendidikan Jasmani</li>
+                            <li>Informatika</li>
+                            <li>Ekonomi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
